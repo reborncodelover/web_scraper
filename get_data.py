@@ -147,6 +147,7 @@ for charity in all_charities:
 		data_missing_charities.append(["Performance Data", charity_id, charity_name, url]);
 		continue
 
+	print("Successfully scraped data for: ", charity_id, charity_name)
 	all_charities_data.append([charity_id, charity_name, charity_ein, charity_street_addr, \
 		charity_tel, charity_fax, \
 		charity_overall_rating, charity_financial_rating, charity_transparency_rating, \
