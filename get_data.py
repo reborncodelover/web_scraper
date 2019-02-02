@@ -159,6 +159,14 @@ for charity in all_charities:
 
 with open('all_charities_data.csv', 'w') as csvfile:
 	fwriter = csv.writer(csvfile)
+	# write the header row first
+	fwriter.writerow(['Charity_ID', 'Charity_Name', 'EIN', 'Street_Address', \
+		'Telephone', 'Fax', \
+		'Overall_Rating', 'Financial_Rating', 'Transparency_Rating', \
+		'Program_Expenses', 'Administrative_Expenses', 'Fundraising_Expenses', \
+		'Fundraising_Efficiency', 'Revenue_Growth', 'Expenses_Growth', \
+		'Working_Capital_Ratio', 'Core_Service', 'Tagline', 'Website', 'Scraped_From'])
+	# write all data rows after that
 	[fwriter.writerow(row) for row in all_charities_data]
 
 with open('data_missing_charities.csv', 'w') as csvfile:
